@@ -29,12 +29,12 @@ class AuthController extends Controller
          * this is one way of going about this
          * TODO I might resort to choosing this approach later
          */
-        return response([
-            'user' => $user,
-            'token' => $token
-        ]);
+//        return response([
+//            'user' => $user,
+//            'token' => $token
+//        ]);
 
-//        return response(compact('user', 'token'));
+        return response(compact('user', 'token'));
     }
 
     public function login(LoginRequest $request)
@@ -44,7 +44,7 @@ class AuthController extends Controller
         if (!Auth::attempt($credentials)) {
             return response ([
                 'message' => 'Provided email address or password is incorrect'
-            ]);
+            ], 422);
         }
 
         /** @var User $user */
