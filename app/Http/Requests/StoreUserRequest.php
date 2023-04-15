@@ -4,9 +4,8 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rules\Password;
-//use Illuminate\Support\Facades\Password;
 
-class SignupRequest extends FormRequest
+class StoreUserRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -30,10 +29,10 @@ class SignupRequest extends FormRequest
                 'required',
                 'confirmed',
                 Password::min(8)
-                    ->letters()
-                    ->numbers()
-                    ->symbols()
-                    ->uncompromised(3)
+                ->letters()
+                ->symbols()
+                ->numbers()
+                ->uncompromised(3)
             ]
         ];
     }
