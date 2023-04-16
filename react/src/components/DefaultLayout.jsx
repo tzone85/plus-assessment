@@ -14,7 +14,7 @@ export default function DefaultLayout() {
     const onLogout = (event) => {
         event.preventDefault();
 
-        axiosClient.post('/logout')
+        axiosClient.post(`/logout`)
             .then(() => {
                 setUser({})
                 setToken(null)
@@ -22,7 +22,7 @@ export default function DefaultLayout() {
     }
 
     useEffect(() => {
-        axiosClient.get('/user')
+        axiosClient.get(`/user`)
             .then(({data}) => {
                 setUser(data)
             })
