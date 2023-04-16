@@ -26,7 +26,7 @@ export default function Signup() {
 
         console.log("Logging Payload: ", payload);
 
-        axiosClient.post('/signup', payload)
+        axiosClient.post(`/signup`, payload)
             .then(({data}) => {
                 setUser(data.user)
                 setToken(data.token)
