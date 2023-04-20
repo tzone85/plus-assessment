@@ -1,5 +1,144 @@
 
 # Plus Assessment
+## Structure
+```bash
+.
+├── README.md
+├── app
+│   ├── Console
+│   │   └── Kernel.php
+│   ├── Exceptions
+│   │   └── Handler.php
+│   ├── Http
+│   │   ├── Controllers
+│   │   │   ├── Api
+│   │   │   └── Controller.php
+│   │   ├── Kernel.php
+│   │   ├── Middleware
+│   │   │   ├── Authenticate.php
+│   │   │   ├── EncryptCookies.php
+│   │   │   ├── PreventRequestsDuringMaintenance.php
+│   │   │   ├── RedirectIfAuthenticated.php
+│   │   │   ├── TrimStrings.php
+│   │   │   ├── TrustHosts.php
+│   │   │   ├── TrustProxies.php
+│   │   │   ├── ValidateSignature.php
+│   │   │   └── VerifyCsrfToken.php
+│   │   ├── Requests
+│   │   │   ├── LoginRequest.php
+│   │   │   ├── SignupRequest.php
+│   │   │   ├── StoreUserRequest.php
+│   │   │   └── UpdateUserRequest.php
+│   │   └── Resources
+│   │       └── UserResourcce.php
+│   ├── Models
+│   │   └── User.php
+│   └── Providers
+│       ├── AppServiceProvider.php
+│       ├── AuthServiceProvider.php
+│       ├── BroadcastServiceProvider.php
+│       ├── EventServiceProvider.php
+│       └── RouteServiceProvider.php
+├── artisan
+├── bootstrap
+│   ├── app.php
+│   └── cache
+│       ├── packages.php
+│       └── services.php
+├── composer.json
+├── composer.lock
+├── config
+│   ├── app.php
+│   ├── auth.php
+│   ├── broadcasting.php
+│   ├── cache.php
+│   ├── cors.php
+│   ├── database.php
+│   ├── filesystems.php
+│   ├── hashing.php
+│   ├── logging.php
+│   ├── mail.php
+│   ├── queue.php
+│   ├── sanctum.php
+│   ├── services.php
+│   ├── session.php
+│   └── view.php
+├── database
+│   ├── factories
+│   │   └── UserFactory.php
+│   ├── migrations
+│   │   ├── 2014_10_12_000000_create_users_table.php
+│   │   ├── 2014_10_12_100000_create_password_reset_tokens_table.php
+│   │   ├── 2019_08_19_000000_create_failed_jobs_table.php
+│   │   └── 2019_12_14_000001_create_personal_access_tokens_table.php
+│   └── seeders
+│       └── DatabaseSeeder.php
+├── docker-compose.yml
+├── package.json
+├── phpunit.xml
+├── public
+│   ├── favicon.ico
+│   ├── index.php
+│   └── robots.txt
+├── react
+│   ├── env.example
+│   ├── index.html
+│   ├── package-lock.json
+│   ├── package.json
+│   ├── public
+│   │   └── vite.svg
+│   ├── router.jsx
+│   ├── src
+│   │   ├── App.jsx
+│   │   ├── axios-client.js
+│   │   ├── components
+│   │   │   ├── DefaultLayout.jsx
+│   │   │   └── GuestLayout.jsx
+│   │   ├── contexts
+│   │   │   └── ContextProvider.jsx
+│   │   ├── index.css
+│   │   ├── main.jsx
+│   │   └── views
+│   │       ├──  Login.jsx
+│   │       ├── Dashboard.jsx
+│   │       ├── NotFoundView.jsx
+│   │       ├── Signup.jsx
+│   │       ├── UserForm.jsx
+│   │       └── Users.jsx
+│   └── vite.config.js
+├── resources
+│   ├── css
+│   │   └── app.css
+│   ├── js
+│   │   ├── app.js
+│   │   └── bootstrap.js
+│   └── views
+│       └── welcome.blade.php
+├── routes
+│   ├── api.php
+│   ├── channels.php
+│   ├── console.php
+│   └── web.php
+├── storage
+│   ├── app
+│   │   └── public
+│   ├── framework
+│   │   ├── cache
+│   │   │   └── data
+│   │   ├── sessions
+│   │   ├── testing
+│   │   └── views
+│   └── logs
+│       └── laravel.log
+├── tests
+│   ├── CreatesApplication.php
+│   ├── Feature
+│   │   └── ExampleTest.php
+│   ├── TestCase.php
+│   └── Unit
+│       └── ExampleTest.php
+└── vite.config.js
+```
 
 ## Development server
 
